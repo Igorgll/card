@@ -1,0 +1,101 @@
+.card-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-picture {
+    width: 95px;
+    padding: 4px;
+    border: 2px solid #896bff;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.title {
+    color: var(--title-color);
+    font-family: var(--title-font);
+    font-size: 43.33px;
+    line-height: 48.75px;
+}
+
+.text {
+    color: var(--text-color);
+    font-family: var(--text-font);
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400;
+    max-width: 375px;
+    margin: auto;
+}
+
+.text strong {
+    color: var(--title-color);
+    font-weight: bolder;
+}
+
+.text-footer {
+    font-weight: bolder;
+}
+
+@media screen and (min-width: 768px) {
+    .card-header {
+        text-align: start;
+    }
+
+    .profile-picture,
+    .text {
+        margin: 0;
+    }
+
+    .text-footer {
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .profile-picture {
+        width: 150px;
+        object-fit: cover;
+        transition: transform 0.6s;
+    }
+
+    .zoom-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 40px;
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+
+    .img-hover {
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .img-hover img:hover {
+        transform: scale(1.2);
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        width: 62%;
+    }
+
+    .about h1 {
+        font-size: 28px;
+        width: 300px;
+    }
+
+    .title {
+        font-size: 34px;
+        line-height: 55px;
+    }
+
+    .text {
+        font-size: 16px;
+        max-width: 100%;
+    }
+}

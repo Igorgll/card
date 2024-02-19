@@ -1,0 +1,54 @@
+@import url('card.css');
+@import url('card_header.css');
+@import url('card_body.css');
+
+:root {
+    --title-color: #ffffff;
+    --text-color: #a8a5ad;
+    --title-font: 'Lexend', sans-serif;
+    --text-font: 'Inter', sans-serif;
+    --card-bg-color: #363543;
+}
+
+body {
+    user-select: none;
+    padding: 17px;
+    text-align: center;
+    background: linear-gradient(
+        90deg,
+        rgba(110, 0, 255, 1) 0%,
+        rgba(99, 78, 207, 1) 50%,
+        rgba(0, 155, 255, 1) 100%
+    );
+    animation: fadeInAnimation ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        padding: 37px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        padding: 0;
+    }
+
+    main {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
